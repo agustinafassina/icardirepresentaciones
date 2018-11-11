@@ -1,1 +1,199 @@
-pruebaaaaaaaaaaa
+<!DOCTYPE html>.
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>ICARDI REPRESENTACIONES</title>
+    <meta name="author" content="Adtile">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    
+    <script src="js/responsive-nav.js"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="img/favicon/4781paraconvertir.ico">
+    <script>
+        // Esperamos a que la web haya cargado
+        $(document).ready(function(){
+            // Evento activado tras hacer click en el botón Enviar del
+            // formulario cuya id es "submit-form"
+            $("#submit-form").click(function(evento){
+                // Eliminamos el comportamiento por defecto del form
+                // para que no se ejecute el action del formulario
+                evento.preventDefault();
+                // Cargamos el resultado que nos envía el archivo sendmail.php
+                // en la etiqueta #respuesta de formulario.html tras enviarle
+                // los parametros por POST
+                $("#respuesta").load("controller/contact.php", {
+                    // Asignamos a una variable $_POST["mensaje_post"] el
+                    // contenido del cuadro de texto cuya id es "mensaje"
+                    mensaje_post: $("#mensaje").val(),
+                    nombre_post: $("#nombre").val(),
+                    telefono_post: $("#telefono").val(),
+                    email_post: $("#email").val()
+                });
+            });
+        });
+    </script>
+  </head>
+  <style>
+    a:focus, a:hover {
+      color: #ca9d66;
+      text-decoration: none;  
+  </style>
+  <body>
+
+    <header>
+      <div class="container">
+        <a href="#inicio" class="logo" data-scroll><img src="img/logo.png" style="width:60%"></a>
+        <nav class="nav-collapse" style="margin-top: 4%;">
+        <ul>
+          <li class="menu-item active"><a href="#inicio" data-scroll>INICIO</a></li>
+          <li class="menu-item"><a href="#nosotros" data-scroll>NOSOTROS</a></li>
+          <li class="menu-item"><a href="#ingresocl" data-scroll>INGRESO CLIENTE</a></li>
+          <li class="menu-item"><a href="#contacto" data-scroll>CONTACTO</a></li>
+          <li class="menu-item"><a href="#productos" data-scroll>PRODUCTOS</a></li>
+          
+         
+        </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="inicio" style="margin-top:13%">
+        <img src="img/slider/slide3.png" alt="New York" style="width:100%">
+    </section>
+    <section id="nosotros" >
+      <div class="container">
+            
+              <h1>Nosotros</h1>
+              <p class="texto_quienes_somos">Icardi Representaciones es una empresa dedicada a la venta de insumos para heladerías y confiterías. Radicada en Córdoba Capital. Nace el 1ro de Agosto  del año 2013 de la mano de la familia Icardi. Teniendo como base la amplia experiencia de Alberto, el padre de la familia, y Gastón, el hijo mayor, ambos hábiles en la comercialización de productos en el sector. Es así como se proponen satisfacer las necesidades de las heladerías locales.
+Comenzó como una pequeña empresa, con diez clientes. Iniciando así una trayectoria de desarrollo empresarial en el que progresivamente fue incorporando línea de productos y marcas reconocidas con el compromiso de cumplir con las altas exigencias de sus clientes. La capacitación en forma permanente y la actualización en cuanto a los cambios en innovaciones del sector permitieron  poder brindar un servicio de excelencia.
+Este progreso le ha concedido contar en la actualidad, no solo con clientes locales,  sino también  en Alta Gracia, Valle de Punilla, Mina Clavero, Jesús María, Ruta 19, la provincia de Santiago del Estero y La Rioja.
+</p>
+              <br> <br>
+              <div class="row">
+                  <div class="col-sm-6">
+                    <h2>Visión</h2>
+                    <p class="texto_quienes_somos">Consolidar el liderazgo como proveedores de firmas reconocidas. 
+Posicionarnos como número uno en el sector.</p>
+                  </div>
+                  <div class="col-sm-6">
+                    <h2>Misión</h2>
+                    <p class="texto_quienes_somos">Ofrecer productos de excelencia, de primeras líneas, basándonos en la experiencia y conocimiento del sector.
+Apuntar a una atención personalizada y de calidad para con nuestros clientes tomando la prestancia como pilar que guía el trabajo diario.</p>
+                  </div>
+              </div>
+    </div>   
+    </section>
+    <section id="ingresocl" class="ingreso_cliente_fondo">
+        <div class="margenes_seccion">
+          <h3 style="color: #e7c6ba">¡Muy pronto!</h3>
+          <h4 style="color: #e7c6ba"><img src="img/IconoUsuario.png" style="width: 4%;margin-block-end: 14px;"> ¡INGRESO CLIENTES!</h4>
+        </div> 
+    </section>
+
+    <section id="contacto">
+      <div class="container" style="margin-bottom: 10px;">
+        <h1>Contactos</h1>
+        <p class="texto_quienes_somos" align="left" >Complete los datos en el formulario.<br>
+Su consulta será respondida a la brevedad. 
+        </p>
+        <br><br>
+        <div id="contact_form">
+            <form name="formulario" method="post">
+            <div class="row">
+                <div class="col-sm-6">
+                    <p class="input_contacto" align="left" >
+                        NOMBRE Y APELLIDO
+                    </p>
+                    <input type="nombre" name="nombre" id="nombre" class="form-control"><br>
+                    <p class="input_contacto" align="left" >
+                        E-MAIL
+                    </p>
+                    <input type="email" name="email" id="email" class="form-control"><br>
+                    <p class="input_contacto" align="left" >
+                        TELÉFONO
+                    </p>
+                    <input type="text" name="telefono" id="telefono" class="form-control">
+                    <br>
+                </div>  
+                <div class="col-sm-6">
+                    <p class="input_contacto" align="left" >
+                        CONSULTA
+                    </p>
+                    <textarea class="form-control" id="mensaje" name="mensaje" style="height:94px">
+                    </textarea>
+                </div>  
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div>
+                        <input type="submit"  id="submit-form" class="form-control boton_enviar">
+                        
+                    </div>
+                </div>
+            </div> 
+            </form>
+            <span id="respuesta"></span>
+        </div>
+      </div>
+      <br>
+      <img src="img/googlemaps.png" style="width:100%">  
+    </section>
+
+    <section id="productos">
+      <div class="container">
+        <h1>Productos</h1>
+        <div class="row">
+            <div class="col-sm-3">
+              <img src="img/producto1.png" class="categoria_productos">
+              <p class="categoria_detalle">Detalle del producto</p>
+            </div>
+            <div class="col-sm-3">
+                <img src="img/producto2.png" class="categoria_productos">
+                <p class="categoria_detalle">Detalle del producto</p>
+            </div>
+            <div class="col-sm-3">
+                <img src="img/producto3.png" class="categoria_productos">
+                <p class="categoria_detalle">Detalle del producto</p>
+            </div>
+            <div class="col-sm-3">
+                <img src="img/producto4.png" class="categoria_productos">
+                <p class="categoria_detalle">Detalle del producto</p>
+            </div>  
+       </div>
+     </div>       
+    </section>
+    <footer>
+        <div class="container">
+          <div class="row">
+          <div class="col-sm-2" style="text-align: right;">
+              <img src="img/icono_1.png" class="img_footer">
+          </div>
+          <div class="col-sm-2">
+              <p class="detalle_footer">(3563)407400</p>
+          </div>
+          <div class="col-sm-2" style="text-align: right;">
+              <img src="img/icono_2ubicacion.png" class="img_footer">
+          </div>
+          <div class="col-sm-2">
+              <p class="detalle_footer">Córdoba 137, Centro.</p>
+          </div>
+          <div class="col-sm-2" style="text-align: right;">
+              <img src="img/icono_3sobre.png" class="img_footer">
+          </div>
+          <div class="col-sm-2">
+              <p class="detalle_footer">agustinafassina@gmail.com</p>
+          </div>
+          </div>
+        </div>             
+    </footer>
+    
+
+    <script src="js/fastclick.js"></script>
+    <script src="js/scroll.js"></script>
+    <script src="js/fixed-responsive-nav.js"></script>
+  </body>
+</html>
