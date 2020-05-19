@@ -369,7 +369,7 @@ header {
 .input_contacto{
   font-family: 'Dosis-Book';
   font-size: 18px;
-  color: #245884;
+  color: #fff;
   font-weight: bold;
   /*width: 72%;*/
 }
@@ -379,6 +379,7 @@ header {
   color: #fff;
   font-weight: bold;
   font-family: 'Dosis-Book';
+  border: 1px solid #245884;
   width: 20%;
 }
 section{
